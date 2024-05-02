@@ -1,0 +1,35 @@
+postRequest:
+    handler: requestor/postRequest.handler
+    # role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /createRequest
+              method: post
+              cors: true
+
+GetOpenRequests:
+    handler: requestor/GetOpenRequests.handler
+    # role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /GetOpenRequests
+              method: get
+              cors: true
+
+PutRequest:
+    handler: requestor/PutRequest.handler
+    # role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /PutRequest/{uuid}
+              method: put
+              cors: true
+
+GetSpecificRequest:
+    handler: requestor/GetSpecificRequest.handler
+    # role: ${env:LAMBDA_ROLE}
+    events:
+        - http:
+              path: /GetSpecificRequest/{uuid}
+              method: get
+              cors: true

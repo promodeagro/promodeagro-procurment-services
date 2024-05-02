@@ -1,0 +1,15 @@
+service: procurement-workflow
+
+frameworkVersion: "3"
+
+useDotenv: true
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions: 
+  - ${file(./createRequest/function.yml)}
