@@ -29,7 +29,7 @@ exports.handler = async (event) => {
     try {
         const requestor = {
             requestor_id: uuid(),
-            status: "pending",
+            status: "approved",
             details: details,
             items: [],
         };

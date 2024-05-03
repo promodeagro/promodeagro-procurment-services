@@ -1,0 +1,41 @@
+createPost:
+    handler: Dashboard/createRequest.createRequest
+    timeout: 300
+    events:
+      - http:
+          path: create
+          method: post
+          cors: true
+
+
+getAllRequests:
+    handler: Dashboard/getAllRequests.getAllRequests
+    timeout: 300
+    events:
+      - httpApi:
+          path: /GetAllRequests
+          method: get
+
+getApprovedRequests:
+    handler: Dashboard/getApprovedRequests.getApprovedRequests
+    timeout: 300
+    events:
+      - httpApi:
+          path: /getApprovedRequests
+          method: get 
+
+getRejectedRequests:
+    handler: Dashboard/getRejectedRequests.getRejectedRequests
+    timeout: 300
+    events:
+      - httpApi:
+          path: /getRejectedRequests
+          method: get    
+
+getPendingRequests:
+    handler: Dashboard/getPendingRequests.getPendingRequests
+    timeout: 300
+    events:
+      - httpApi:
+          path: /getPendingRequests
+          method: get                  

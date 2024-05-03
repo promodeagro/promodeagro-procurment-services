@@ -1,0 +1,17 @@
+
+
+service: promodeagro-procurment-services
+
+frameworkVersion: "3"
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+
+
+functions:
+  - ${file(./requestor/function.yml)}
+  - ${file(./Dashboard/function.yml)}
