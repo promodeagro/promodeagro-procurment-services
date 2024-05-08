@@ -38,4 +38,12 @@ getPendingRequests:
     events:
       - httpApi:
           path: /getPendingRequests
-          method: get                  
+          method: get         
+
+getAllPercentage:
+    handler: Dashboard/getAllPercentage.get_requestor_status_percentage
+    timeout: 300
+    events:
+      - http: 
+           path: "/percent"
+           method: get        
