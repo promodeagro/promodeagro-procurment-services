@@ -37,7 +37,7 @@ exports.get_requestor_status_percentage = async (event, context, callback) => {
 
         data.Items.forEach(item => {
             console.log('Processing item:', item);
-            const status = item.status && item.status.S;
+            const status = item.status;
             console.log('Item status:', status);
             switch (status) {
                 case 'approved':
